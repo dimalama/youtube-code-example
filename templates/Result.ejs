@@ -1,0 +1,29 @@
+<div class="result-view">
+    <p>Your are looking for <b><%= query %></b></p>
+    <ol>
+        <% for(var i = 0; i < items.length; i++) { %>
+        <li>
+            <div class="preview">
+                <a href="http://www.youtube.com/watch?v=<%= items[i].id.videoId %>">
+                    <img src="<%= items[i].snippet.thumbnails.default.url %>" />
+                </a>
+
+            </div>
+            <div class="info">
+                <h3>
+                    <a href="http://www.youtube.com/watch?v=<%= items[i].id.videoId %>">
+                        <span><%= items[i].snippet.title %></span>
+                    </a>
+                </h3>
+
+            </div>
+
+        </li>
+        <% } %>
+    </ol>
+    <div class="pagination">
+        <a href="#" id="prev" class="page">Prev</a>
+        <a href="#" id="next" class="page">Next</a>
+    </div>
+</div>
+
